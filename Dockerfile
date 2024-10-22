@@ -2,7 +2,7 @@ FROM python:3.10-alpine
 ENV PYTHONUNBUFFERED=1
 LABEL authors='nkarimi@linux.com'
 
-WORKDIR /django-starter
+WORKDIR /tenants
 
 COPY requirements.txt requirements.txt
 
