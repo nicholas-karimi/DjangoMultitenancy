@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # env.read_env(BASE_DIR / '.env')
 env_file = BASE_DIR / '.env.prod' if env('ENVIRONMENT', default='development') == 'production' else BASE_DIR / '.env'
-print(f"env_file: {env_file}")
+# print(f"env_file: {env_file}")
 environ.Env.read_env(env_file)
 
 # Quick-start development settings - unsuitable for production
