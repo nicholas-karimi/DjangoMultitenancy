@@ -1,7 +1,7 @@
 services:
   web:
     image: nicholaskarimi/django-tenants:latest  # Pull the pre-built image from Docker Hub
-    command: gunicorn --workers 3 --bind 0.0.0.0:8000 tenants.wsgi:application
+    command: gunicorn --workers 3 --bind 0.0.0.0:9000 django_multitenant.wsgi:application
     volumes:
       - ./staticfiles:/tenants/staticfiles
       - ./media:/tenants/media
