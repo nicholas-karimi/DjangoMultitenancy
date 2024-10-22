@@ -1,0 +1,26 @@
+# .dockerignore
+.git
+__pycache__
+*.log
+node_modules
+*.pyc
+env/
+.venv/
+*/venv
+.DS_Store
+env/
+db.sqlite3
+.env
+.coverage
+htmlcov/
+.pytest_cache
+.vs 
+.vscode 
+appstore-env/
+
+media/
+media
+db_data
+db_data/
+postgres_data/
+postgres-data/

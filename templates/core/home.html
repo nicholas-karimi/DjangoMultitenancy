@@ -1,0 +1,35 @@
+{% extends '../base.html' %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Most Popular:</h1>
+
+                <ul id="item-list" class="mb-10">
+                    
+                    {% for item in items  %}
+                        <li class="">{{ item.name }}</li>
+                    {% endfor %}
+                        
+                </ul>
+
+                <form 
+                    hx-post="{% url 'core:add-item' %}"
+                    hx-target="#item-list"
+                    hx-swap="beforeend"
+                    _="on htmx:afterRequest reset me">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="item-name" class="form-label">Item Name</label>
+                        <input type="text" class="form-control" id="item-name" name="item-name" autofocus>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Add Item</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+    

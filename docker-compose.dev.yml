@@ -1,0 +1,9 @@
+services:
+  web:
+    build: . # rebuild the image locally during development
+    volumes:
+      - .:/django-starter
+
+    environment:
+      - ENV=development
+      - DEBUG=True

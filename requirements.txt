@@ -1,0 +1,9 @@
+Django
+whitenoise
+django-environ
+django-silk
+django-tenants
+
+
+psycopg2
+psycopg2-binary

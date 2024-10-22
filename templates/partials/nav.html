@@ -1,0 +1,45 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'assets/images/logo/expenwise-high-resolution-logo-transparent.png' %}" alt="logo" width="250" height="50"
+            >
+            
+            {% if request.tenant %}
+                {{ request.tenant.name }}
+            {% else %}
+                Expenwise
+            {% endif %}
+                
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"></li>
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Register</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
