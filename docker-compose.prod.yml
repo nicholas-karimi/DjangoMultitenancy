@@ -10,10 +10,10 @@ services:
     environment:
       - ENV=production
       - DEBUG=False
-      - ALLOWED_HOSTS=tenants.com,102.210.149.111
+      - ALLOWED_HOSTS=tenants.com,102.220.22.107
     env_file: .env.prod
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://102.210.149.111/health/"]
+      test: ["CMD", "curl", "-f", "http://102.220.22.107/health/"]
       interval: 30s
       timeout: 10s
       retries: 5
