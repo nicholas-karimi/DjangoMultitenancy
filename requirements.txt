@@ -3,7 +3,7 @@ whitenoise
 django-environ
 django-silk
 django-tenants
+django-colorfield
 
 
 psycopg2
-psycopg2-binary
