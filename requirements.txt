@@ -4,6 +4,8 @@ django-environ
 django-silk
 django-tenants
 django-colorfield
+gunicorn
+whitenoise
 
 
 psycopg2
