@@ -35,6 +35,7 @@ SHARED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'colorfield', 
 
     # apps
     'apps.core',
@@ -147,6 +148,23 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [ BASE_DIR / 'static' ]
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media' 
+MULTITENANT_RELATIVE_MEDIA_ROOT = "tenants/%s"
+
+STORAGES = {
+    "default": {
+        # "BACKEND": "django_tenants.files.storage.TenantFileSystemStorage", #store tenant specific files in the filesystem
+        "BACKEND": "apps.core.storage.CustomSchemaStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    },
+}
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
