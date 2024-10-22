@@ -26,7 +26,7 @@ if ENVIRONMENT == 'development':
 
 else:
     DEBUG=env('DEBUG')
-    ALLOWED_HOSTS = ['tenants.com','102.210.149.111']
+    ALLOWED_HOSTS = ['tenants.com','102.220.22.107']
 
 
 
