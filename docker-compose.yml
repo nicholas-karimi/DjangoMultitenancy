@@ -1,4 +1,9 @@
-name: django-starter
+name: django-tenants 
+
+networks:
+  default:
+    driver: bridge
+    name: django-tenants
 
 services:
   postgres:
