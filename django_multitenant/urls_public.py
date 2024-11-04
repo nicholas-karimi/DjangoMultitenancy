@@ -7,6 +7,7 @@ from apps.tenants.admin import tenant_admin_site
 urlpatterns = [
 
     path('', include('apps.core.urls')),
+    path('account/', include('apps.users.urls')),
     path('admin/', admin.site.urls),
     path('admin_tenant/', tenant_admin_site.urls),
 ]
