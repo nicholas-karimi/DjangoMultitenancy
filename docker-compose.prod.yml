@@ -10,7 +10,7 @@ services:
     environment:
       - ENV=production
       - DEBUG=False
-      - ALLOWED_HOSTS=tenants.com,102.220.22.107
+      - ALLOWED_HOSTS=expenwise.com,102.210.149.245
     env_file: .env.prod
 
 
