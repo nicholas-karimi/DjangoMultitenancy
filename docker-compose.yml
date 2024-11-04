@@ -31,7 +31,7 @@ services:
     volumes:
       - .:/tenants
 
-    env_file: .env
+    # env_file: .env
 
 volumes:
   postgres-data:
