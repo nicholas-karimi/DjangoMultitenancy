@@ -28,7 +28,7 @@ if ENVIRONMENT == 'development':
 
 else:
     DEBUG=env('DEBUG')
-    ALLOWED_HOSTS = ['expenwise.com','.expenwise.com','www.expenwise.com', '102.210.149.245', '*.expenwise.com', '102.210.149.245']
+    ALLOWED_HOSTS = ['expenwise.com','.expenwise.com','www.expenwise.com', '102.210.149.245', '*.expenwise.com']
 
 
 
