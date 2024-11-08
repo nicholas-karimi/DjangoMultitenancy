@@ -24,7 +24,7 @@ ENVIRONMENT=env('ENVIRONMENT', default='development')
 
 if ENVIRONMENT == 'development':
     DEBUG=env('DEBUG')
-    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'expenwise.com']
 
 else:
     DEBUG=env('DEBUG')
@@ -51,6 +51,8 @@ SHARED_APPS = (
     # apps
     'apps.core',
     'apps.users',
+    "crispy_forms",
+    "crispy_bootstrap5",
 )
 
 TENANT_APPS = (
@@ -184,3 +186,16 @@ STORAGES = {
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+# Dev 
+BASE_URL = 'localhost'
+PORT = ":9000"
+
+# production
+# BASE_URL = 'yourdomain.com'
+# PORT = ""
+# SESSION_COOKIE_DOMAIN = "."+BASE_URL
+# # SESSION_COOKIE_PATH = "/"
+# SESSION_ENGINE = "django.contrib.sessions.backends.cached_db"

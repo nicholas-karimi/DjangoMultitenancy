@@ -1,10 +1,43 @@
 {% extends '../base.html' %}
-
+{% load crispy_forms_tags %}
 {% block content %}
     <div class="container">
         <div class="row">
             <div class="col">
                 <h1>Dashboard</h1>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <select name="tenants" id="" class="form-select">
+                                    <option value="" selected>View Tenants</option>
+                                    
+                                    {% if tenants %}
+                                    {% for tenant in tenants %}
+                                        <option value="{{ tenant.id }}">{{ tenant.name }}</option>
+                                    {% endfor %}
+                                    {% else %}
+                                        <option value="">No Tenants</option>
+                                    {% endif %}
+                                        
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Create New Tenants</h5>
+                                <form method="post">
+                                    {% csrf_token %}
+                                    {{ tenant_form|crispy }}
+                                    <button class="btn btn-primary">Create Tenant</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

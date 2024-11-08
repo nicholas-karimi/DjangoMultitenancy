@@ -1,0 +1,36 @@
+{% extends '../base.html' %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Dashboard</h1>
+        </div>
+    </div>
+</div>
+
+<section class="section dashboard">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="title">Welcome to {{request.tenant.name }}</h2>
+
+
+            {% if request.user.is_authenticated %}
+            <h2>Hello {{request.user.username}}{% if tenant_member.is_admin%} (Admin) {%endif %}</h2>
+
+            {% if not tenant_member %}
+            <p>To access this site, contact the Admin</p>
+            {% else %}
+            <p>Nice to have you.</p>
+            {% endif %}
+            {%else %}
+            <button>Login</button>
+            {%endif%}
+
+        </div>
+</section>
+
+
+
+{% endblock %}

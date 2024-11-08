@@ -6,6 +6,8 @@ django-tenants
 django-colorfield
 gunicorn
 whitenoise
+django-crispy-forms
+crispy-bootstrap5
 
 
 psycopg2
